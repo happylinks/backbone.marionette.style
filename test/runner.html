@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Tests</title>
+  <link rel='stylesheet' href='../node_modules/mocha/mocha.css' />
+
+  <!-- Polyfill (required by 6to5) -->
+  <script src='../node_modules/6to5/browser-polyfill.js'></script>
+
+  <!-- Testing libraries -->
+  <script src='../node_modules/mocha/mocha.js'></script>
+  <script src='../node_modules/chai/chai.js'></script>
+  <script src='../node_modules/sinon/pkg/sinon.js'></script>
+  <script src='../node_modules/sinon-chai/lib/sinon-chai.js'></script>
+
+  <!-- Load required libs. TODO: Should be in browserify.js -->
+  <script src='../node_modules/jquery/dist/jquery.js'></script>
+  <script src='../node_modules/underscore/underscore.js'></script>
+  <script src='../node_modules/backbone/backbone.js'></script>
+  <script src='../node_modules/backbone.marionette/lib/backbone.marionette.js'></script>
+
+  <!-- Load the built library -->
+  <script src='../tmp/__spec-build.js'></script>
+
+  <!-- Add your tests here -->
+  <script src='unit/style.js'></script>
+</head>
+<body>
+  <!-- Required for browser reporter -->
+  <div id='mocha'></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test</title>
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/underscore/underscore.js"></script>
+  <script src="node_modules/backbone/backbone.js"></script>
+  <script src="node_modules/backbone.marionette/lib/backbone.marionette.js"></script>
+  <script src="dist/backbone.marionette.style.js"></script>
+  <script>
+    Marionette.Behaviors.behaviorsLookup = function() {
+      return {
+        Style: Marionette.StyleBehavior
+      };
+    };
+    var template = _.template('<div></div>');
+
+    var StyleView = Marionette.ItemView.extend({
+      template: template,
+      behaviors: {
+        Style: {}
+      },
+      style: function() {
+        return {
+          backgroundColor: this.model.get('backgroundColor')
+        }
+      }
+    });
+
+    var view = new StyleView();
+    view.render();
+    console.log(view);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
